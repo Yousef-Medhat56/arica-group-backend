@@ -93,7 +93,7 @@ pids
 logs
 results
 .node_history
-
+node_modules
 ############################
 # Tests
 ############################
@@ -106,6 +106,7 @@ coverage
 ############################
 
 .env
+.env.production
 license.txt
 exports
 *.cache
