@@ -102,6 +102,7 @@ module.exports = {
     try {
       //send email with the visit request data for each employee
       employees.forEach(async (employee) => {
+        console.log(employee)
         await strapi.plugins["email"].services.email.sendTemplatedEmail(
           {
             to: employee.email,
