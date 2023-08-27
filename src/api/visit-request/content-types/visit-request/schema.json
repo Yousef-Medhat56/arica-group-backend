@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visit_requests",
+  "info": {
+    "singularName": "visit-request",
+    "pluralName": "visit-requests",
+    "displayName": "visit-request",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "visit_date": {
+      "type": "date"
+    },
+    "call_date": {
+      "type": "date"
+    },
+    "service": {
+      "type": "enumeration",
+      "enum": [
+        "Swimming pools",
+        "Gardens",
+        "Fountains",
+        "Irrigation networks",
+        "Electricity networks",
+        "Maintenance"
+      ]
+    },
+    "visit_time": {
+      "type": "string"
+    },
+    "call_time": {
+      "type": "string"
+    }
+  }
+}

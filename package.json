@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Arica Group backend",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.4.3",
+    "@strapi/plugin-users-permissions": "4.4.3",
+    "@strapi/strapi": "4.4.3",
+    "better-sqlite3": "7.4.6",
+    "pg": "^8.11.1",
+    "strapi-plugin-meilisearch": "^0.9.1",
+    "strapi-provider-email-sendinblue": "^4.0.0"
+  },
+  "author": {
+    "name": "Yousef Medhat"
+  },
+  "strapi": {
+    "uuid": "3a99b699-a1db-4536-8c3d-9395fb7039ee"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

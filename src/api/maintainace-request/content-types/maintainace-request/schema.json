@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "maintainace_requests",
+  "info": {
+    "singularName": "maintainace-request",
+    "pluralName": "maintainace-requests",
+    "displayName": "Maintainance request",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "visit_date": {
+      "type": "date",
+      "required": false
+    },
+    "call_date": {
+      "type": "date"
+    },
+    "service": {
+      "type": "enumeration",
+      "enum": [
+        "Swimming pools",
+        "Gardens",
+        "Fountains",
+        "Irrigation networks",
+        "Electricity networks"
+      ]
+    },
+    "visit_time": {
+      "type": "string"
+    },
+    "call_time": {
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    }
+  }
+}

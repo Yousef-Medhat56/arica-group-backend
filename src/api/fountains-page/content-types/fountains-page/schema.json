@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "fountains_pages",
+  "info": {
+    "singularName": "fountains-page",
+    "pluralName": "fountains-pages",
+    "displayName": "Fountains page"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "service": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "component": "service.service-section"
+    },
+    "why_us": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "service.why-us",
+      "required": true
+    }
+  }
+}
