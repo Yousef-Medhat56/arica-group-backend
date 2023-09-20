@@ -13,9 +13,9 @@ module.exports = ({ env }) => ({
   meilisearch: {
     config: {
       // Your meili host
-      host: "http://localhost:7700",
+      host: env("MEILISEARCH_HOST"),
       // Your master key or private key
-      apiKey: "Amr4GTD6XdRcy21mmglMZYJXPFMAxiSCUVoAX7MsU_A",
+      apiKey: env("MEILISEARCH_API_KEY"),
       offer: {
         indexName: "products",
       },
