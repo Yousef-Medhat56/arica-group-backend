@@ -10,18 +10,30 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  // meilisearch: {
-  //   config: {
-  //     // Your meili host
-  //     host: "http://localhost:7700",
-  //     // Your master key or private key
-  //     apiKey: "MASTER_KEY",
-  //     offer: {
-  //       indexName: "products",
-  //     },
-  //     "gardens-page": {
-  //       indexName: "products",
-  //     },
-  //   },
-  // },
+  meilisearch: {
+    config: {
+      // Your meili host
+      host: "http://localhost:7700",
+      // Your master key or private key
+      apiKey: "Amr4GTD6XdRcy21mmglMZYJXPFMAxiSCUVoAX7MsU_A",
+      offer: {
+        indexName: "products",
+      },
+      "gardens-page": {
+        indexName: "products",
+      },
+      "swimming-pools-page": {
+        indexName: "products",
+      },
+      "fountains-page": {
+        indexName: "products",
+      },
+      "electricity-networks-page": {
+        indexName: "products",
+      },
+      "irrigation-networks-page": {
+        indexName: "products",
+      },
+    },
+  },
 });

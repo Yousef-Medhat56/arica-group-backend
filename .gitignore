@@ -104,7 +104,8 @@ coverage
 ############################
 # Strapi
 ############################
-
+node_modules
+build
 .env
 .env.production
 license.txt

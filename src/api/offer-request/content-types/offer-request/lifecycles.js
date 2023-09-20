@@ -7,12 +7,20 @@ const returnEmailTemplate = (offerRequest) => {
 
    <tr>
       <th align="left" style="border:1px solid #000;padding:8px;">
-        name
+        offer
       </th>
       <td align="left" style="border:1px solid #000;padding:8px;">
-        ${offerRequest.name}
+        ${offerRequest.offer.title}
       </td>
     </tr>
+    <tr>
+    <th align="left" style="border:1px solid #000;padding:8px;">
+      name
+    </th>
+    <td align="left" style="border:1px solid #000;padding:8px;">
+      ${offerRequest.name}
+    </td>
+  </tr>
    <tr>
       <th align="left" style="border:1px solid #000;padding:8px;">
         phone

@@ -15,7 +15,7 @@
     "@strapi/strapi": "4.4.3",
     "better-sqlite3": "7.4.6",
     "pg": "^8.11.1",
-    "strapi-plugin-meilisearch": "^0.9.1",
+    "strapi-plugin-meilisearch": "^0.9.2",
     "strapi-provider-email-sendinblue": "^4.0.0"
   },
   "author": {
