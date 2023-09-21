@@ -810,6 +810,73 @@ export interface ApiAccessoryTypeAccessoryType extends Schema.CollectionType {
   };
 }
 
+export interface ApiBrandBrand extends Schema.SingleType {
+  collectionName: 'brands';
+  info: {
+    singularName: 'brand';
+    pluralName: 'brands';
+    displayName: 'Brand';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    logo: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    highlighted_text: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    black_bold_text: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    gray_text: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::brand.brand',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::brand.brand',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::brand.brand',
+      'oneToMany',
+      'api::brand.brand'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiElectricityNetworksPageElectricityNetworksPage
   extends Schema.SingleType {
   collectionName: 'electricity_networks_pages';
@@ -1551,6 +1618,102 @@ export interface ApiServiceService extends Schema.CollectionType {
   };
 }
 
+export interface ApiServicesDescriptionServicesDescription
+  extends Schema.SingleType {
+  collectionName: 'services_descriptions';
+  info: {
+    singularName: 'services-description';
+    pluralName: 'services-descriptions';
+    displayName: 'Services Description';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    gardens: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    swimming_pools: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    fountains: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    irrigation_networks: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    electricity_networks: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    accessories: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    maintainance: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    student_training: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::services-description.services-description',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::services-description.services-description',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::services-description.services-description',
+      'oneToMany',
+      'api::services-description.services-description'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiSocialMediaSocialMedia extends Schema.SingleType {
   collectionName: 'social_medias';
   info: {
@@ -1785,6 +1948,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::accessory-type.accessory-type': ApiAccessoryTypeAccessoryType;
+      'api::brand.brand': ApiBrandBrand;
       'api::electricity-networks-page.electricity-networks-page': ApiElectricityNetworksPageElectricityNetworksPage;
       'api::employee.employee': ApiEmployeeEmployee;
       'api::featured-client.featured-client': ApiFeaturedClientFeaturedClient;
@@ -1798,6 +1962,7 @@ declare module '@strapi/strapi' {
       'api::project.project': ApiProjectProject;
       'api::review.review': ApiReviewReview;
       'api::service.service': ApiServiceService;
+      'api::services-description.services-description': ApiServicesDescriptionServicesDescription;
       'api::social-media.social-media': ApiSocialMediaSocialMedia;
       'api::statistic.statistic': ApiStatisticStatistic;
       'api::student-training-request.student-training-request': ApiStudentTrainingRequestStudentTrainingRequest;
