@@ -19,12 +19,14 @@ module.exports = {
     } else if (accessoryServiceId === data.service && !data.accessory_type) {
       throw new ApplicationError("Choose the accessory type");
     } else if (accessoryServiceId !== data.service && data.accessory_type) {
-    } else if (
-      accessoryServiceId === data.service &&
-      !data.price_before_discount
-    ) {
-      throw new ApplicationError("Enter the price before discount");
-    } else if (accessoryServiceId !== data.service) {
+    }
+    //  else if (
+    //   accessoryServiceId === data.service &&
+    //   !data.price_before_discount
+    // ) {
+    //   throw new ApplicationError("Enter the price before discount");
+    // } 
+    else if (accessoryServiceId !== data.service) {
       data.accessory_type = null;
       data.price_before_discount = null;
     }
