@@ -1,6 +1,6 @@
 const _ = require("lodash");
 
-const returnEmailTemplate = (offerRequest) => {
+const returnEmailTemplate = (offerRequest, offerTitle) => {
   const emailTemplate = {
     subject: "New Offer request",
     html: `<table style="border-collapse: collapse;">
@@ -10,7 +10,7 @@ const returnEmailTemplate = (offerRequest) => {
         offer
       </th>
       <td align="left" style="border:1px solid #000;padding:8px;">
-        ${offerRequest.offer.title}
+        ${offerTitle}
       </td>
     </tr>
     <tr>
@@ -58,8 +58,14 @@ const returnEmailTemplate = (offerRequest) => {
 module.exports = {
   async afterCreate(event) {
     // Connected to "Save" button in admin panel
-    const { result } = event;
-    console.log(result);
+    const { result, params } = event;
+
+    //get offer details
+    const offerDetails = await strapi.entityService.findOne(
+      "api::offer.offer",
+      params.data.offer
+    );
+
     // get employees emails
     const employees = await strapi.entityService.findMany(
       "api::employee.employee",
@@ -75,7 +81,7 @@ module.exports = {
           {
             to: employee.email,
           },
-          returnEmailTemplate(result)
+          returnEmailTemplate(result, offerDetails.title)
         );
       });
 
