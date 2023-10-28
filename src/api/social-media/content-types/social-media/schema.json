@@ -4,7 +4,8 @@
   "info": {
     "singularName": "social-media",
     "pluralName": "social-medias",
-    "displayName": "social_media"
+    "displayName": "social_media",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -25,6 +26,10 @@
     },
     "whatsapp": {
       "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "required": true
     }
   }
 }

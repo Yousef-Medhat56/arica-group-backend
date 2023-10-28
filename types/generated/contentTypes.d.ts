@@ -1720,6 +1720,7 @@ export interface ApiSocialMediaSocialMedia extends Schema.SingleType {
     singularName: 'social-media';
     pluralName: 'social-medias';
     displayName: 'social_media';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1730,6 +1731,7 @@ export interface ApiSocialMediaSocialMedia extends Schema.SingleType {
     twitter: Attribute.String;
     linkedin: Attribute.String;
     whatsapp: Attribute.String;
+    phone: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
