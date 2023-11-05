@@ -816,6 +816,7 @@ export interface ApiBrandBrand extends Schema.SingleType {
     singularName: 'brand';
     pluralName: 'brands';
     displayName: 'Brand';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -852,6 +853,12 @@ export interface ApiBrandBrand extends Schema.SingleType {
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+      }>;
+    hero_image: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;

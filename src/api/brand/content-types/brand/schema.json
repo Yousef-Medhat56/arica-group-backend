@@ -4,7 +4,8 @@
   "info": {
     "singularName": "brand",
     "pluralName": "brands",
-    "displayName": "Brand"
+    "displayName": "Brand",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,17 +17,17 @@
   },
   "attributes": {
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     },
     "highlighted_text": {
       "pluginOptions": {
@@ -54,6 +55,18 @@
       },
       "type": "string",
       "required": true
+    },
+    "hero_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
